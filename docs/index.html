@@ -88,20 +88,35 @@
         </div>
         </div>
         <script>
+            var touched = false;
+
+            $(".gallery").on("mouseover", function () {
+                touched = true;
+            });
+
+            $(".gallery").on("click", function () {
+                touched = true;
+            });
+
             function sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
             }
+
             function scroll(y) {
                 document.getElementById("slider").scrollTo({
                     left: y,
                     behavior: 'smooth'
                 })
             }
+
             window.addEventListener('load', async function () {
-                await sleep(500);
-                for (var x=0; x<25; x++){
-                    scroll(35);
-                    await sleep(50);
+                for (var x=0; x<5000; x++){
+                    if (touched == true) {
+                        break;
+                    }
+                    await sleep(10);
+                    scroll(x*0.25);
+                    console.log(x);
                 }
             });
         </script>
