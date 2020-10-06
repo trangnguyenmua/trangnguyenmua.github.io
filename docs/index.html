@@ -114,11 +114,11 @@
             }
 
             window.addEventListener('load', async function () {
-                for (var x=0; x<1500; x++){
+                for (var x=0; x<2000; x++){
                     if (touched == true) {
                         break;
                     }
-                    await sleep(7);
+                    await sleep(10);
                     scroll(x*0.25);
                     console.log(x);
                 }
