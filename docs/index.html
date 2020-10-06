@@ -93,6 +93,10 @@
             $(".gallery").on("mouseover", function () {
                 touched = true;
             });
+            
+            $(".gallery").on("tap", function () {
+                touched = true;
+            });
 
             $(".gallery").on("click", function () {
                 touched = true;
@@ -110,11 +114,11 @@
             }
 
             window.addEventListener('load', async function () {
-                for (var x=0; x<5000; x++){
+                for (var x=0; x<1500; x++){
                     if (touched == true) {
                         break;
                     }
-                    await sleep(10);
+                    await sleep(7);
                     scroll(x*0.25);
                     console.log(x);
                 }
