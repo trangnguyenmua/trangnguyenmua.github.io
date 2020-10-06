@@ -51,13 +51,14 @@
 
 
 
-
+    </div>
         <!-- Content -->
-        <div class="">
+        <div id="outer">
             <!-- Row 1 -->
-            <div class="carousel">
+            <div class="carousel" id="slider">
                     <img src="images/IMG_0608.JPG" class="gallery">
-                    <img src="images/5.jpg" class="gallery">
+                    <span id="stopper"></span>
+                    <img src="images/12.jpg" class="gallery">
                     <img src="images/2020_Phor_Studios_Shoot_2_Scan_05.jpg" class="gallery">
                     <img src="images/GS2.jpg" class="gallery">
                     <img src="images/14.jpg" class="gallery">
@@ -66,13 +67,13 @@
                     <img src="images/GS3.jpg" class="gallery">
                     <img src="images/IMG_0607.JPG" class="gallery">
                     <img src="images/1O7A0412.jpg" class="gallery">
+                    <img src="images/1O7A0864.jpg" class="gallery">
                     <img src="images/2020_Phor_Studios_Aime_Shoot_2_Mikaela-3.jpg" class="gallery">
-                    <img src="images/12.jpg" class="gallery">
+                    <img src="images/5.jpg" class="gallery">
                     <img src="images/1O7A0483.jpg" class="gallery">
                     <img src="images/GS1.jpg" class="gallery">
             </div>
         </div>
-    </div>
         <div class="container" style="padding-top: 30px; align: center;">
             <div class="row">
                 <div class="col-12 footer">
@@ -87,5 +88,11 @@
                 </div>
         </div>
         </div>
+        <script>
+            document.getElementById("slider").scrollTo({
+                    left: 250,
+                    behavior: 'smooth'
+                });
+        </script>
 </body>
 </html>
