@@ -57,7 +57,6 @@
             <!-- Row 1 -->
             <div class="carousel" id="slider">
                     <img src="images/IMG_0608.JPG" class="gallery">
-                    <span id="stopper"></span>
                     <img src="images/12.jpg" class="gallery">
                     <img src="images/2020_Phor_Studios_Shoot_2_Scan_05.jpg" class="gallery">
                     <img src="images/GS2.jpg" class="gallery">
@@ -89,10 +88,17 @@
         </div>
         </div>
         <script>
-            document.getElementById("slider").scrollTo({
-                    left: 250,
+            function scroll(y) {
+                document.getElementById("slider").scrollTo({
+                    left: y,
                     behavior: 'smooth'
-                });
+                })
+            }
+            window.addEventListener('load', function () {
+                for (var x=0; x<50; x++){
+                    scroll(x*25 + 25);
+                }
+            });
         </script>
 </body>
 </html>
